@@ -1,0 +1,49 @@
+.form {
+  margin-bottom: 2rem;
+
+  &__input {
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: var(--text-secondary-color);
+    }
+  }
+}
+
+.custom-checkbox {
+  display: inline-block;
+  width: 2.8rem;
+  height: 2.8rem;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  margin-right: 2rem;
+  @include flex-center;
+  cursor: pointer;
+  transition: all .2s;
+
+  &:hover {
+    border-color: var(--text-primary-color);
+  }
+
+  & > svg {
+    opacity: 0;
+  }
+}
+
+.hidden-checkbox:checked {
+  & + .custom-checkbox {
+    border: none;
+    background-image: linear-gradient(to right bottom, #57ddff, #c058f3);
+
+    & > svg {
+      opacity: 1;
+    }
+  }
+
+  & ~ span {
+    color: inherit;
+    text-decoration: line-through;
+  }
+}

@@ -1,0 +1,47 @@
+.todo__list {
+  height: 30rem;
+  overflow: auto;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &, & > *:not(:last-child) {
+    border-bottom: 1px solid var(--text-secondary-color);
+  }
+
+  @media only screen and (hover: none) {
+    height: 50vh;
+  }
+}
+
+.todo__row {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.todo__title {
+  flex: 1;
+  font-size: 2rem;
+  color: var(--text-primary-color);
+}
+
+.no-todos {
+  font-size: 2rem;
+  @include absolute-center;
+}
+
+.todo__remove {
+  margin-left: 2rem;
+
+  & > svg {
+    fill: currentColor;
+    transition: all .2s;
+  }
+
+  &:hover > svg {
+    fill: var(--text-primary-color);
+  }
+}

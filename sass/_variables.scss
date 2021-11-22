@@ -1,0 +1,19 @@
+:root {
+  --bg-image-desktop: url(../img/bg-desktop-light.jpg);
+  --bg-image-mobile: url(../img/bg-mobile-light.jpg);
+  --body-bg-color: #fafafa;
+  --todo-bg-color: #fff;
+  --shadow: 0 .5rem 2rem #cacde8;
+  --text-primary-color: #4d5066;
+  --text-secondary-color: #cacde8;
+}
+
+.dark {
+  --bg-image-desktop: url(../img/bg-desktop-dark.jpg);
+  --bg-image-mobile: url(../img/bg-mobile-dark.jpg);
+  --body-bg-color: #161722;
+  --todo-bg-color: #25273c;
+  --shadow: 0 .5rem 2rem #25273c;
+  --text-primary-color: #cacde8;
+  --text-secondary-color: #4d5066;
+}

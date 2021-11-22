@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: transparent;
+}
+
+html {
+  font-size: 62.5%;   //   10px root font-size
+
+  @media only screen and (max-width: 56.25em) {   //   900px
+    font-size: 56.25%;   //   9px
+  }
+
+  @media only screen and (max-width: 37.5em) {   //   600px
+    font-size: 50%;   //   8px
+  }
+
+  @media only screen and (max-width: 25em) {   //   400px
+    font-size: 43.75%;   //   7px
+  }
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  min-height: 100vh;
+  padding: 3rem;
+  @include flex-center;
+  background-color: var(--body-bg-color);
+  background-image: var(--bg-image-desktop);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @media only screen and (max-width: 67.5em) and (orientation: portrait) {   //   1080px
+    background-image: var(--bg-image-mobile);
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button, input {
+  font-family: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+}
+
+[class*='hidden'] {
+  display: none;
+}
